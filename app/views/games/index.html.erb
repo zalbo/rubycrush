@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Games</h1>
+
+<tbody>
+  <table>
+    <tr>
+    <% @matrix.each_with_index do |color, row, col| %>
+      <% if col == @n_matrix - 1 %>
+        <th id="row<%=row%> col<%=col%>" class= "element"><%=color%></th>
+      </tr>
+      <tr>
+      <% else %>
+        <th id="row<%=row%> col<%=col%>"><%=color%></th>
+      <%end%>
+    <%end%>
+  </table>
+</tbody>
