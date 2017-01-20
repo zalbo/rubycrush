@@ -7,11 +7,11 @@
     <tr>
     <% @matrix.each_with_index do |color, row, col| %>
       <% if col == @n_matrix - 1 %>
-        <th id="row<%=row%> col<%=col%>" class= "element"><%=color%></th>
+        <th class="element" id= "<%=color[0]%>" onclick="select(<%=row%>, <%=col%>, this)"></th>
       </tr>
       <tr>
       <% else %>
-        <th id="row<%=row%> col<%=col%>"><%=color%></th>
+        <th class="element" id= "<%=color[0]%>" onclick="select(<%=row%>, <%=col%>, this)"></th>
       <%end%>
     <%end%>
   </table>
