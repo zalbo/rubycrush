@@ -6,7 +6,7 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     color = ['red', 'blue', 'green', 'purple', 'orange'] #create 5 color
-    @n_matrix = 5
+    @n_matrix = 10
     @matrix = Matrix.build(@n_matrix) {color.sample(1)} #create random matrix
   end
 
